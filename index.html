@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/styles.css">
+    <title>Hogar de Adultos</title>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="static/logo.jpg" alt="Logo" class="logo">
+        </div>
+    </header>
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#nuestros-servicios">Nuestros Servicios</a>
+        <a href="#">Contacto</a>
+    </nav>
+    <div class="whatsapp-banner">
+        <span>Consúltenos: </span>
+        <img src="static/whatsapp-logo.png" alt="WhatsApp" class="whatsapp-logo">
+        <span> 0221 3031151</span>
+    </div>  
+    <div class="image-banner">
+        <img src="static/banner.jpg" alt="Banner" class="banner-image">
+        <div class="banner-text">35 años de trayectoria</div>
+    </div>
+    
+    <!-- Sección Nuestros Servicios -->
+    <div id="nuestros-servicios" class="nuestros-servicios">
+        <!-- Bloque con la foto 1 y 2 a la izquierda y el texto a la derecha -->
+        <div class="servicios-container">
+            <div class="servicios-imagenes">
+                <img src="static/foto1.jpg" alt="Imagen 1" class="imagen-cambia">
+                <img src="static/foto2.jpg" alt="Imagen 2" class="imagen-cambia" style="display:none;">
+            </div>
+            <div class="servicios-texto">
+                <div class="banner-verde">HOGAR PARA ADULTOS</div>
+                <p>Hogar Finosa y Finosa Norte cuenta con 35 años de trayectoria, brindando un servicio de calidez y profesionalismo.</p>
+            </div>
+        </div>
+        
+        <!-- Bloque con la foto 3 y 4 a la derecha y el texto a la izquierda -->
+        <div class="servicios-container reverse">
+            <div class="servicios-imagenes">
+                <img src="static/foto3.jpg" alt="Imagen 3" class="imagen-cambia">
+                <img src="static/foto4.jpg" alt="Imagen 4" class="imagen-cambia" style="display:none;">
+            </div>
+            <div class="servicios-texto">
+                <h2>NUESTROS SERVICIOS</h2>
+                <p>Hogar Finosa y Finosa Norte - Somos un Hogar para adultos y discapacitados crónicos.</p>
+                <p>Nuestras instalaciones cuentan con grandes jardines, rodeados de naturaleza y un ambiente cálido y de confort para nuestros huéspedes.</p>
+                <p>Internación permanente con asistencia multidisciplinaria.</p>
+                <p>No dude en consultar.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Hogar de Adultos. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        let currentImage1 = 0;
+        let currentImage2 = 0;
+
+        const images1 = document.querySelectorAll('.servicios-container:nth-child(1) .imagen-cambia');
+        const images2 = document.querySelectorAll('.servicios-container:nth-child(2) .imagen-cambia');
+
+        setInterval(() => {
+            images1[currentImage1].style.display = 'none'; 
+            currentImage1 = (currentImage1 + 1) % images1.length; 
+            images1[currentImage1].style.display = 'block'; 
+        }, 3000); 
+
+        setInterval(() => {
+            images2[currentImage2].style.display = 'none';
+            currentImage2 = (currentImage2 + 1) % images2.length;
+            images2[currentImage2].style.display = 'block';
+        }, 3000);
+    </script>
+</body>
+</html>

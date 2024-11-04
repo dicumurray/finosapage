@@ -1,0 +1,101 @@
+/* Estilos generales */
+body {
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Centra verticalmente el logo en la pantalla */
+}
+
+.logo {
+    width: 20%;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    margin: 0 15px;
+}
+
+.whatsapp-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.whatsapp-logo {
+    width: 24px;
+    height: auto;
+    margin: 0 5px;
+}
+
+.image-banner {
+    position: relative;
+    text-align: center;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.nuestros-servicios {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 20px 0;
+}
+
+.servicios-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.servicios-imagenes img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.servicios-texto {
+    max-width: 50%;
+}
+
+.banner-verde {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
