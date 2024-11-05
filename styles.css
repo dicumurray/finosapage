@@ -1,63 +1,58 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: 'Lora', serif;
-    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
-.header-container {
-    display: flex;
-    align-items: center; 
-    justify-content: space-between; 
-    background-color: white;
-    padding: 10px 20px;
+header {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
 }
 
 .logo {
-    height: 50px; /* Ajusta la altura del logo */
-    width: auto;
+    max-width: 100%;
+    height: auto;
 }
 
-.nav-links {
-    display: flex; /* Para que los links se alineen en fila */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
 }
 
-.nav-links a {
-    margin: 0 10px; /* Espacio entre los links */
-    color: black;
+nav a {
+    color: white;
+    padding: 15px 20px;
     text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    background-color: #555;
 }
 
 .whatsapp-banner {
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: #25D366;
-    padding: 10px;
     color: white;
-    font-size: 18px;
+    padding: 10px;
 }
 
 .whatsapp-logo {
-    height: 24px;
-    width: 24px;
-    margin-left: 5px;
+    max-width: 30px;
+    margin: 0 10px;
 }
 
 .image-banner {
     position: relative;
-    width: 100%;
-    overflow: hidden;
 }
 
 .banner-image {
     width: 100%;
     height: auto;
-    max-height: 300px;
-    object-fit: cover;
 }
 
 .banner-text {
@@ -72,41 +67,58 @@ body {
 
 .nuestros-servicios {
     padding: 20px;
-    text-align: center;
 }
 
 .servicios-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin-bottom: 20px;
 }
 
-.imagen-cambia {
-    width: 100%;
-    max-width: 300px;
+.servicios-container.reverse {
+    flex-direction: row-reverse; /* Inversa para el segundo bloque */
+}
+
+.servicios-imagenes img {
+    max-width: 100%;
     height: auto;
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #f8f8f8;
-    color: #333;
+.servicios-texto {
+    padding: 20px;
+    flex: 1; /* Toma el espacio restante */
 }
 
-/* Estilos Responsivos */
-@media (min-width: 768px) {
-    .header-container {
-        flex-direction: row; /* Asegura que los elementos estén en fila en pantallas más grandes */
+.banner-verde {
+    background-color: green;
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Media Queries para móviles */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Cambia la dirección del flex para móviles */
     }
-    .nav-links {
-        margin-left: auto; /* Esto empuja los links a la derecha */
-    }
+
     .servicios-container {
-        flex-direction: row;
-        justify-content: space-around;
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        text-align: center; /* Centra el texto */
     }
-    .imagen-cambia {
-        max-width: 400px;
+
+    .servicios-texto {
+        padding: 10px; /* Reduce el padding en móviles */
+    }
+    
+    .banner-image {
+        width: 100%; /* Imagen del banner en 100% del ancho */
+        height: auto; /* Mantiene la proporción */
     }
 }
