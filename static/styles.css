@@ -11,23 +11,23 @@ body {
 
 .header-container {
     display: flex;
-    align-items: center; 
-    justify-content: space-between; 
+    align-items: center;
+    justify-content: space-between; /* Mantiene espacio entre el logo y los links */
     background-color: white;
     padding: 10px 20px;
 }
 
 .logo {
-    height: 50px; /* Ajusta la altura del logo */
+    height: 50px;
     width: auto;
 }
 
-.nav-links {
-    display: flex; /* Para que los links se alineen en fila */
+nav {
+    margin-left: auto; /* Esto empuja los links a la derecha */
 }
 
-.nav-links a {
-    margin: 0 10px; /* Espacio entre los links */
+nav a {
+    margin: 0 10px;
     color: black;
     text-decoration: none;
 }
@@ -97,10 +97,7 @@ footer {
 /* Estilos Responsivos */
 @media (min-width: 768px) {
     .header-container {
-        flex-direction: row; /* Asegura que los elementos estén en fila en pantallas más grandes */
-    }
-    .nav-links {
-        margin-left: auto; /* Esto empuja los links a la derecha */
+        flex-direction: row;
     }
     .servicios-container {
         flex-direction: row;
