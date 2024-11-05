@@ -9,7 +9,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Centra verticalmente el logo en la pantalla */
+    width: 150px;
+    height: auto;
+    height: 100vh; /* Centra verticalmente el logo en la pantalla *
+    
 }
 
 .logo {
