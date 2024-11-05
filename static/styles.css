@@ -1,18 +1,19 @@
-/* Estilos globales */
-body {
-    font-family: 'Lora', serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    box-sizing: border-box;
 }
 
-header {
+body {
+    font-family: 'Lora', serif;
+}
+
+.header-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    justify-content: space-between;
     background-color: white;
-    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
 }
 
 .logo {
@@ -20,91 +21,48 @@ header {
     width: auto;
 }
 
-.main-nav a {
-    margin-left: 20px;
+nav a {
+    margin: 0 10px;
+    color: black;
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
 }
 
-.main-nav a:hover {
-    color: #0056b3;
-}
-
-/* Encabezado responsivo */
-@media (max-width: 768px) {
-    .main-nav {
-        display: none;
-    }
-}
-
-/* Estilos para el menú de hamburguesa */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.hamburger div {
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    margin: 4px;
-    transition: 0.4s;
-}
-
-@media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
-    .main-nav.active {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: white;
-        padding: 10px;
-        border: 1px solid #ddd;
-    }
-    .main-nav a {
-        margin: 10px 0;
-    }
-}
-
-/* Otros estilos previos */
 .whatsapp-banner {
     display: flex;
     align-items: center;
-    padding: 10px;
     background-color: #25D366;
+    padding: 10px;
     color: white;
+    font-size: 18px;
 }
 
 .whatsapp-logo {
-    height: 20px; /* Tamaño específico */
-    width: auto;
-    max-width: 20px; /* Asegura que el ancho máximo sea de 20px */
-    display: inline-block; /* Evita que se redimensione inesperadamente */
+    height: 24px;
+    width: 24px;
+    margin-left: 5px;
 }
 
 .image-banner {
     position: relative;
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
 }
 
 .banner-image {
     width: 100%;
     height: auto;
+    object-fit: cover;
 }
 
 .banner-text {
     position: absolute;
     bottom: 20px;
     left: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    padding: 10px;
     font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
 }
 
 .nuestros-servicios {
@@ -113,35 +71,37 @@ header {
 
 .servicios-container {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
     margin-bottom: 20px;
 }
 
-.servicios-container.reverse {
-    flex-direction: row-reverse;
+.servicios-imagenes {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
-.servicios-imagenes img {
-    width: 100%;
-    height: auto;
-    max-width: 250px;
-    margin-right: 20px;
+.imagen-cambia {
+    max-width: 100%;
+    max-height: 300px;
+    object-fit: cover;
 }
 
 .servicios-texto {
-    max-width: 500px;
+    flex: 1;
 }
 
 .banner-verde {
-    background-color: #4CAF50;
+    background-color: green;
     color: white;
-    padding: 5px 10px;
+    padding: 10px;
     font-weight: bold;
 }
 
 footer {
-    background-color: #333;
-    color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px;
+    background-color: #f8f8f8;
+    color: #333;
 }
