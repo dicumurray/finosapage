@@ -5,19 +5,19 @@ body {
     padding: 0;
 }
 
-.logo-container {
+..logo-container {
+    width: 150px; /* Cambia a tu tamaño preferido */
+    height: auto; /* Mantendrá la proporción */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: auto;
-    height: 100vh; /* Centra verticalmente el logo en la pantalla *
-    
+    align-items: center; /* Centra verticalmente el logo si es necesario */
+    justify-content: center; /* Centra horizontalmente el logo si es necesario */
 }
 
+/* Ajusta el tamaño de la imagen del logo */
 .logo {
-    width: 500 px;
-    height: 500 px;
+    width: 100%; /* Se ajusta al ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-width: 100%; /* Evita que el logo exceda el tamaño del contenedor */
 }
 
 nav {
