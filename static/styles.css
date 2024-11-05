@@ -102,3 +102,9 @@ nav a {
     font-weight: bold;
     text-align: center;
 }
+@media (max-width: 600px) {
+    .logo-container {
+        width: 100px; /* Tamaño más pequeño para móviles */
+    }
+}
+
