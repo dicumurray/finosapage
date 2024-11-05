@@ -5,46 +5,39 @@ body {
     padding: 0;
 }
 
-..logo-container {
-    width: 150px; /* Cambia a tu tamaño preferido */
-    height: auto; /* Mantendrá la proporción */
-    display: flex;
-    align-items: center; /* Centra verticalmente el logo si es necesario */
-    justify-content: center; /* Centra horizontalmente el logo si es necesario */
+.logo-container {
+    width: 150px;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
 }
 
-/* Ajusta el tamaño de la imagen del logo */
 .logo {
-    width: 100%; /* Se ajusta al ancho del contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
-    max-width: 100%; /* Evita que el logo exceda el tamaño del contenedor */
+    width: 100%;
+    height: auto;
+    max-width: 100%;
 }
 
 nav {
     display: flex;
     justify-content: center;
-    background-color: #333;
+    gap: 20px;
     padding: 10px 0;
 }
 
 nav a {
-    color: white;
     text-decoration: none;
-    font-size: 24px;
-    margin: 0 15px;
+    color: black;
 }
 
 .whatsapp-banner {
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin: 15px 0;
-}
-
-.whatsapp-logo {
-    width: 24px;
-    height: auto;
-    margin: 0 5px;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px;
+    background-color: #f0f0f0;
 }
 
 .image-banner {
@@ -59,52 +52,70 @@ nav a {
 
 .banner-text {
     position: absolute;
-    top: 50%;
+    bottom: 20px;
     left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 24px;
-    font-weight: bold;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
-}
-
-.nuestros-servicios {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    padding: 20px 0;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .servicios-container {
     display: flex;
-    align-items: center;
-    gap: 20px;
+    justify-content: space-around;
+    margin: 20px 0;
+    padding: 10px;
 }
 
-.reverse {
-    flex-direction: row-reverse;
+.servicios-imagenes, .servicios-texto {
+    flex: 1;
 }
 
 .servicios-imagenes img {
-    width: 500px;
-    height: 500px;
-    object-fit: cover;
-}
-
-.servicios-texto {
-    max-width: 50%;
+    width: 100%;
+    height: auto;
 }
 
 .banner-verde {
     background-color: green;
     color: white;
-    padding: 10px;
-    font-size: 24px;
-    font-weight: bold;
     text-align: center;
-}
-@media (max-width: 600px) {
-    .logo-container {
-        width: 100px; /* Tamaño más pequeño para móviles */
-    }
+    padding: 5px;
 }
 
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+/* Media query para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .servicios-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .logo-container {
+        width: 100px;
+    }
+
+    .whatsapp-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .banner-text {
+        font-size: 14px;
+        padding: 5px;
+    }
+}
