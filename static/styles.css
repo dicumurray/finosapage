@@ -82,9 +82,10 @@ header {
 }
 
 .whatsapp-logo {
-    height: 20px;
+    height: 20px; /* Tamaño específico */
     width: auto;
-    margin-left: 5px;
+    max-width: 20px; /* Asegura que el ancho máximo sea de 20px */
+    display: inline-block; /* Evita que se redimensione inesperadamente */
 }
 
 .image-banner {
