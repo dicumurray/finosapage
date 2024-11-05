@@ -1,146 +1,112 @@
-/* Estilos globales */
-body {
-    font-family: 'Lora', serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    box-sizing: border-box;
 }
 
-header {
+body {
+    font-family: 'Lora', serif;
+    line-height: 1.6;
+}
+
+.header-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
+    align-items: center; 
+    justify-content: space-between; 
     background-color: white;
-    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
 }
 
 .logo {
-    height: 50px;
+    height: 50px; /* Ajusta la altura del logo */
     width: auto;
 }
 
-.main-nav a {
-    margin-left: 20px;
+.nav-links {
+    display: flex; /* Para que los links se alineen en fila */
+}
+
+.nav-links a {
+    margin: 0 10px; /* Espacio entre los links */
+    color: black;
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
 }
 
-.main-nav a:hover {
-    color: #0056b3;
-}
-
-/* Encabezado responsivo */
-@media (max-width: 768px) {
-    .main-nav {
-        display: none;
-    }
-}
-
-/* Estilos para el menú de hamburguesa */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.hamburger div {
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    margin: 4px;
-    transition: 0.4s;
-}
-
-@media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
-    .main-nav.active {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: white;
-        padding: 10px;
-        border: 1px solid #ddd;
-    }
-    .main-nav a {
-        margin: 10px 0;
-    }
-}
-
-/* Otros estilos previos */
 .whatsapp-banner {
     display: flex;
     align-items: center;
-    padding: 10px;
     background-color: #25D366;
+    padding: 10px;
     color: white;
+    font-size: 18px;
 }
 
 .whatsapp-logo {
-    height: 20px;
-    width: auto;
+    height: 24px;
+    width: 24px;
     margin-left: 5px;
 }
 
 .image-banner {
     position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
 .banner-image {
     width: 100%;
     height: auto;
+    max-height: 300px;
+    object-fit: cover;
 }
 
 .banner-text {
     position: absolute;
     bottom: 20px;
     left: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    padding: 10px;
     font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
 }
 
 .nuestros-servicios {
     padding: 20px;
+    text-align: center;
 }
 
 .servicios-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
 }
 
-.servicios-container.reverse {
-    flex-direction: row-reverse;
-}
-
-.servicios-imagenes img {
+.imagen-cambia {
     width: 100%;
+    max-width: 300px;
     height: auto;
-    max-width: 250px;
-    margin-right: 20px;
-}
-
-.servicios-texto {
-    max-width: 500px;
-}
-
-.banner-verde {
-    background-color: #4CAF50;
-    color: white;
-    padding: 5px 10px;
-    font-weight: bold;
 }
 
 footer {
-    background-color: #333;
-    color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Estilos Responsivos */
+@media (min-width: 768px) {
+    .header-container {
+        flex-direction: row; /* Asegura que los elementos estén en fila en pantallas más grandes */
+    }
+    .nav-links {
+        margin-left: auto; /* Esto empuja los links a la derecha */
+    }
+    .servicios-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .imagen-cambia {
+        max-width: 400px;
+    }
 }
